@@ -367,3 +367,50 @@ header {
 #alertButton:hover {
     background-color: black;
 }
+@media only screen and (max-width: 600px) {
+    body {
+        text-align: center; /* Mengatur konten body ke tengah pada layar mobile */
+    }
+
+    .kotak {
+        width: calc(50% - 40px); /* Mengatur lebar kotak menjadi setengah dari lebar layar dengan margin 20px di setiap sisi */
+        margin: 20px; /* Memberikan margin atas dan bawah 20px, dan horizontal otomatis diatur ke tengah */
+    }
+
+    .judul-album {
+        margin-top: 20px; /* Mengurangi margin atas pada judul album */
+    }
+
+    .overview {
+        flex-direction: column; /* Mengubah tata letak konten menjadi tata letak kolom pada tampilan mobile */
+        margin-left: 5%; /* Mengurangi margin kiri */
+        margin-right: 5%; /* Mengurangi margin kanan */
+    }
+
+    .overview .deskripsi {
+        padding: 20px; /* Mengurangi padding pada deskripsi */
+    }
+
+    .overview .gambar img {
+        width: 100%; /* Mengisi lebar gambar sesuai dengan lebar layar pada tampilan mobile */
+    }
+
+    .overview h2 {
+        font-size: 30px; /* Mengurangi ukuran font judul pada tampilan mobile */
+        margin-top: 20px; /* Mengurangi margin atas pada judul */
+    }
+
+    .overview p {
+        font-size: 14px; /* Mengurangi ukuran font deskripsi pada tampilan mobile */
+    }
+
+    .video-container {
+        flex-direction: column; /* Mengubah tata letak konten menjadi tata letak kolom pada tampilan mobile */
+        align-items: center; /* Mengatur konten ke tengah pada tampilan mobile */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Mengisi lebar iframe sesuai dengan lebar layar pada tampilan mobile */
+        height: auto; /* Mengatur tinggi agar proporsional pada tampilan mobile */
+    }
+}
