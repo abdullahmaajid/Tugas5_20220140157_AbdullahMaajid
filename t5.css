@@ -179,6 +179,7 @@ header {
 .overview .gambar img {
     width: 350px; /* Mengatur lebar gambar */
     height: auto; /* Mengatur tinggi gambar agar tetap proporsional */
+    border-radius: 5%; /* Membuat gambar menjadi bundar */
 }
 
 .overview h2,
@@ -373,7 +374,8 @@ header {
     }
 
     .kotak {
-        width: calc(50% - 40px); /* Mengatur lebar kotak menjadi setengah dari lebar layar dengan margin 20px di setiap sisi */
+        height: calc(50% - 50px);
+        width: calc(50% - 50px); /* Mengatur lebar kotak menjadi setengah dari lebar layar dengan margin 20px di setiap sisi */
         margin: 20px; /* Memberikan margin atas dan bawah 20px, dan horizontal otomatis diatur ke tengah */
     }
 
@@ -393,7 +395,13 @@ header {
 
     .overview .gambar img {
         width: 100%; /* Mengisi lebar gambar sesuai dengan lebar layar pada tampilan mobile */
+        height: auto; /* Mengatur tinggi agar proporsional pada tampilan mobile */
+        max-width: 100%; /* Pastikan gambar tidak melebihi lebar layar */
+        min-width: 300px; /* Menetapkan lebar minimum gambar */
+        display: block; /* Pastikan gambar ditampilkan sebagai blok agar tidak ada margin ekstra */
+        margin: 0 auto; /* Pusatkan gambar di dalam kontainer */
     }
+    
 
     .overview h2 {
         font-size: 30px; /* Mengurangi ukuran font judul pada tampilan mobile */
