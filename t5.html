@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fortime Site</title>
+<link rel="stylesheet" href="t5.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Logo di sini -->
+            <img src="fortimesite.jpg" alt="Logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <!-- Kotak pencarian di sini -->
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    
+    <!-- Konten Overview -->
+    <div class="overview">
+        <div class="gambar">
+            <img src="logofortime.png" alt="Fortime Band">
+        </div>
+        <div class="deskripsi">
+            <h2>Fortime Band</h2>
+            <p>Fortime adalah sebuah band musik yang berasal dari kota Cilacap, Jawa Tengah, yang mengusung genre pop. Band ini terdiri dari sekelompok anggota muda yang berbakat dan bersemangat dalam mengeksplorasi dunia musik. Meskipun berasal dari kota yang mungkin kurang dikenal secara nasional dalam industri musik, Fortime telah berhasil menarik perhatian pendengar dengan gaya musiknya yang segar dan lirik yang menyentuh.</p>
+            <p>Dengan dedikasi dan kerja keras, Fortime telah merilis satu album yang mengukuhkan posisinya di ranah musik lokal. Album tersebut tidak hanya mendapat sambutan hangat dari para penggemar di kota asal mereka, tetapi juga mendapatkan apresiasi dari pendengar di berbagai belahan Indonesia. Keberhasilan album pertama ini membuka pintu bagi band ini untuk terus berkarya dan mengeksplorasi potensi kreatif mereka lebih jauh.</p>
+        </div>
+    </div>
+
+    <div class="teks-tengah">
+        <p>Tetaplah Baik</p>
+    </div>
+
+    <div class="kotak" id="kotak1" data-audio="https://www.youtube.com/watch?v=RcdnkgteWL8" onclick="toggleAudio('kotak1')">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Bukan</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<div class="kotak" id="kotak2">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Biarlah</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<div class="kotak" id="kotak3">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Dan Tenggelam</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<div class="kotak" id="kotak4">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Gagal Romens</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<div class="kotak" id="kotak5">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Menuju Minggu</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<div class="kotak" id="kotak6">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Seasa</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<div class="kotak" id="kotak7">
+    <div class="content">
+        <div class="image-container">
+            <img class="album" src="fortime.png" alt="Fortime">
+        </div>
+        <div class="info">
+            <p class="judul-lagu">Teman Tapi Sayang</p>
+            <p class="judul-album">Tetaplah Baik</p>
+        </div>
+    </div>
+</div>
+
+<audio id="musicPlayer" controls style="display:none;">
+    <source src="" type="audio/mp3" id="musicSource">
+</audio> 
+
+<h4 id="songTitle" style="color: white; display: none;font-family: sans-serif;font-size: 25px;">Judul Lagu</h4> 
+
+<div id="progressBar">
+    <div id="progressIndicator"></div>
+</div>
+
+<div id="controls">
+<!-- Setel display ke none -->
+    <button id="previousButton">Previous</button>
+    <button id="playPauseButton">Play</button>
+    <button id="nextButton">Next</button>
+</div>
+
+<div class="teks-tengah">
+    <p>Video</p>
+</div>
+
+
+
+<script>
+    // Fungsi untuk menampilkan alert saat tombol diklik
+    function showAlert() {
+        alert('Terima kasih telah mengunjungi Fortime Site!');
+    }
+
+    // Menambahkan event listener pada tombol
+    document.getElementById('alertButton').addEventListener('click', showAlert);
+</script>
+
+<!-- Tambahkan konten video YouTube di bawah kotak-kotak lagu -->
+<div class="video-wrapper">
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QVRN9Em_4ts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cRC16lR2yfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1eTW0KYT1go" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZW_kQEnraUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7AshfJqUEMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9JUvxvWfgYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+<footer>
+    <div class="footer-menu">
+        <div class="footer-menu-column">
+            <h3>Tentang</h3>
+            <ul>
+                <li><a href="#">Tentang Kami</a></li>
+
+            </ul>
+        </div>
+        <div class="footer-menu-column">
+            <h3>Media Sosial</h3>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
+        <div class="footer-menu-column">
+            <h3>Album</h3>
+            <ul>
+                <li><a href="#">Tetaplah Baik</a></li>
+            </ul>
+        </div>
+        <div class="footer-menu-column">
+            <h3>Hubungi Kami</h3>
+            <ul>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Whatsapp</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+<button id="alertButton">Klik untuk alert</button>
+
+</footer>
+
+<script>
+    // Fungsi untuk menampilkan alert saat tombol diklik
+    function showAlert() {
+        alert('Terima kasih telah mengunjungi Fortime Site!');
+    }
+
+    // Menambahkan event listener pada tombol
+    document.getElementById('alertButton').addEventListener('click', showAlert);
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var musicPlayer = document.getElementById('musicPlayer');
+        var playPauseButton = document.getElementById('playPauseButton');
+        var previousButton = document.getElementById('previousButton');
+        var nextButton = document.getElementById('nextButton');
+    
+        var songs = [
+            {title: 'Bukan', file: 'bukan.mp3'},
+            {title: 'Biarlah', file: 'biarlah.mp3'},
+            {title: 'Dan Tenggelam', file: 'dan tenggelam.mp3'},
+            {title: 'Gagal Romens', file: 'gagal romens.mp3'},
+            {title: 'Menuju Minggu', file: 'menuju minggu.mp3'},
+            {title: 'Seasa', file: 'seasa.mp3'},
+            {title: 'Teman Tapi Sayang', file: 'teman tapi sayang.mp3'}
+        ];
+    
+        var currentSongIndex = 0;
+    
+        function playPause() {
+            if (musicPlayer.paused) {
+                musicPlayer.currentTime = 0;
+                musicPlayer.play();
+                playPauseButton.textContent = 'Pause';
+                document.getElementById('songTitle').style.display = 'block'; // Tampilkan judul lagu saat mulai dimainkan
+            } else {
+                musicPlayer.pause();
+                playPauseButton.textContent = 'Play';
+            }
+        }
+    
+        function playNextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            musicPlayer.src = songs[currentSongIndex].file;
+            musicPlayer.currentTime = 0;
+            musicPlayer.play();
+            playPauseButton.textContent = 'Pause';
+            updateSongTitle(songs[currentSongIndex].title);
+            document.getElementById('songTitle').style.display = 'block'; // Tampilkan judul lagu saat dimainkan
+        }
+    
+        function playPreviousSong() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            musicPlayer.src = songs[currentSongIndex].file;
+            musicPlayer.currentTime = 0;
+            musicPlayer.play();
+            playPauseButton.textContent = 'Pause';
+            updateSongTitle(songs[currentSongIndex].title);
+            document.getElementById('songTitle').style.display = 'block'; // Tampilkan judul lagu saat dimainkan
+        }
+    
+        playPauseButton.addEventListener('click', playPause);
+        nextButton.addEventListener('click', playNextSong);
+        previousButton.addEventListener('click', playPreviousSong);
+    
+        var audio = document.getElementById('musicPlayer');
+        var source = document.getElementById('musicSource');
+        var currentPlaying = null;
+    
+        function playMusic(title) {
+            var selectedSong = songs.find(song => song.title === title);
+            if (!selectedSong) return;
+    
+            if (currentPlaying === title) {
+                if (audio.paused) {
+                    audio.play();
+                    document.getElementById('songTitle').style.display = 'block'; // Tampilkan judul lagu saat dimainkan
+                } else {
+                    audio.pause();
+                }
+            } else {
+                if (currentPlaying !== null) {
+                    pauseMusic();
+                }
+    
+                currentPlaying = title;
+                updateSongTitle(title);
+                source.src = selectedSong.file;
+                audio.load();
+                audio.play();
+                document.getElementById('songTitle').style.display = 'block'; // Tampilkan judul lagu saat dimainkan
+            }
+            updatePlayPauseButtons();
+        }
+    
+        function updateSongTitle(title) {
+            songTitle.textContent = title;
+        }
+    
+        function pauseMusic() {
+            audio.pause();
+            updatePlayPauseButtons();
+        }
+    
+        var kotakList = document.querySelectorAll('.kotak');
+    
+        kotakList.forEach(function(kotak) {
+            var judulLagu = kotak.querySelector('.judul-lagu');
+            judulLagu.addEventListener('click', function() {
+                playMusic(judulLagu.textContent);
+            });
+        });
+    
+        function updatePlayPauseButtons() {
+            var pauseButtons = document.querySelectorAll('.pause');
+            var kotakList = document.querySelectorAll('.kotak');
+    
+            pauseButtons.forEach(function(button) {
+                var parentKotak = button.closest('.kotak');
+                if (parentKotak.textContent === currentPlaying && !audio.paused) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            });
+    
+            kotakList.forEach(function(kotak) {
+                var judulLagu = kotak.querySelector('.judul-lagu');
+                if (judulLagu.textContent === currentPlaying && !audio.paused) {
+                    judulLagu.style.color = 'yellow';
+                } else {
+                    judulLagu.style.color = 'white';
+                }
+            });
+        }
+    });
+    
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Deklarasi variabel
+        var audio = document.getElementById('musicPlayer');
+        var progressBar = document.getElementById('progressBar');
+        var progressIndicator = document.getElementById('progressIndicator');
+        var songTitle = document.getElementById('songTitle'); // Tambahkan variabel untuk judul lagu
+        
+        // Fungsi untuk memperbarui progress bar dan progress indicator
+        function updateProgressIndicator() {
+            var progress = (audio.currentTime / audio.duration) * 100; // Hitung persentase progress
+            progressIndicator.style.width = progress + '%'; // Atur lebar progress indicator sesuai dengan progress
+        }
+
+        function updateSongTitle(title) {
+            songTitle.textContent = title; // Atur judul lagu
+        }
+        
+        // Event listener untuk memperbarui progress bar saat lagu diputar
+        audio.addEventListener('timeupdate', function() {
+            updateProgressIndicator();
+        });
+        
+        // Event listener untuk mengatur waktu pemutaran lagu saat progress bar diklik
+        progressBar.addEventListener('click', function(e) {
+            var rect = progressBar.getBoundingClientRect();
+            var offsetX = e.clientX - rect.left; // Hitung posisi horizontal klik relatif terhadap progress bar
+            var percent = offsetX / progressBar.offsetWidth; // Hitung persentase progress berdasarkan posisi klik
+            audio.currentTime = audio.duration * percent; // Atur waktu pemutaran lagu sesuai dengan persentase progress
+        });
+    });
+</script>
+
+</body>
+</html>

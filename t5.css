@@ -1,0 +1,369 @@
+body {
+    background-image: url('purple3.png');
+    text-align: center; /* Untuk membuat .kotak berada di tengah */
+}
+
+.kotak {
+    width: 150px;
+    height: 250px;
+    margin: 20px; /* Tambahkan margin atas dan bawah 20px */
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    vertical-align: top; /* Mengatur kotak-kotak agar posisinya sama di bagian atas */
+}
+
+.kotak:hover {
+    transform: scale(1.05); /* Efek zoom perlahan saat terkena kursor */
+}
+
+.kotak .info {
+    padding-top: 10px; /* Menambah jarak dari atas untuk judul lagu */
+}
+
+.judul-lagu, .judul-album {
+    font-family: sans-serif;
+    margin: 13px 0;
+    color: white;
+    text-align: center; /* Mengatur teks ke tengah */
+}
+
+.judul-lagu {
+    font-size: 17px; /* Ukuran font judul lagu */
+    font-weight: bold; /* Tebal teks judul lagu */
+}
+
+.judul-album {
+    margin-top: 50px;
+    font-size: 14px; /* Ukuran font judul album */
+    font-weight: medium; /* Ketebalan teks judul album */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.kotak img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    transition: filter 0.3s ease;
+}
+
+.kotak .play,
+.kotak .pause {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.kotak:hover .play,
+.kotak:hover .pause {
+    display: block;
+}
+
+.kotak p {
+    margin: 5px 0;
+}
+
+header {
+    background-color: black; /* Warna latar belakang header */
+    color: white; /* Warna teks */
+    padding: 10px; /* Padding untuk memberi ruang di dalam header */
+    display: flex;
+    align-items: center; /* Mengatur elemen secara vertikal di tengah */
+}
+
+.logo {
+    flex: 1; /* Logo akan mengambil ruang yang tersedia */
+}
+
+.logo img {
+    border-radius: 50%;
+    max-width: 100px; /* Mengatur lebar maksimum untuk logo */
+}
+
+.menu {
+    flex: 2; /* Menu akan mengambil ruang yang tersedia */
+    text-align: center; /* Mengatur menu di tengah */
+}
+
+.menu ul {
+    font-family: sans-serif;
+    list-style-type: none; /* Menghapus bullet pada daftar */
+    padding: 0; /* Menghapus padding default */
+}
+
+.menu ul li {
+    display: inline; /* Menampilkan daftar secara horizontal */
+    margin-right: 20px; /* Memberi jarak antar item daftar */
+}
+
+.menu ul li a {
+    color: white; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus dekorasi tautan */
+}
+
+.menu ul li a:hover {
+    text-decoration: underline; /* Menampilkan garis bawah pada tautan saat dihover */
+}
+
+.search-box {
+    flex: 1; /* Kotak pencarian akan mengambil ruang yang tersedia */
+    text-align: right; /* Mengatur konten di kanan */
+}
+
+.search-box input[type="text"] {
+    padding: 5px; /* Padding untuk input teks */
+    border-radius: 5px; /* Membuat sudut kotak input agak melengkung */
+    border: none; /* Menghapus border */
+}
+
+.search-box button {
+    padding: 5px 10px; /* Padding untuk tombol */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Membuat sudut kotak tombol agak melengkung */
+    background-color: #333; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat mengarah ke tombol */
+}
+
+.search-box button:hover {
+    background-color: #555; /* Warna latar belakang tombol saat dihover */
+}
+
+.teks-tengah {
+    text-align: center; /* Pusatkan teks */
+    margin-bottom: 20px; /* Beri jarak ke kotak-kotak lagu */
+}
+
+.teks-tengah p {
+    margin-top: 100px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 35px; /* Ukuran font teks */
+    color: white; /* Warna teks */
+}
+
+.overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 15%; /* Batasan kiri */
+    margin-right: 15%; /* Batasan kanan */
+}
+
+.overview .deskripsi {
+    background-color: rgba(255, 255, 255, 0.01); /* Warna latar belakang dengan transparansi */
+    border-radius: 10px; /* Sudut sudut elemen */
+    padding: 30px; /* Padding untuk memberi ruang di dalam elemen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek kaca */
+}
+
+.overview .gambar img {
+    width: 350px; /* Mengatur lebar gambar */
+    height: auto; /* Mengatur tinggi gambar agar tetap proporsional */
+}
+
+.overview h2,
+.overview p {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-align: justify;
+    margin: 0; /* Menghapus margin bawaan */
+}
+
+.overview h2 {
+    font-weight: bold;
+    font-size: 45px; /* Ukuran font judul */
+    margin-top: 35px; /* Menurunkan margin atas judul */
+}
+
+.overview p {
+    margin-top: 20px;
+    font-size: 15px; /* Ukuran font deskripsi */
+    margin-bottom: 0px; /* Menurunkan margin bawah deskripsi */
+}
+
+.video-wrapper {
+    max-width: 100%; /* Lebar maksimum untuk konten */
+    margin: 0 auto; /* Menengahkan konten di tengah */
+    padding: 0 20px; /* Menambahkan padding di sisi video */
+    overflow-x: auto; /* Memberikan kemampuan scroll horizontal jika video melebihi lebar layar */
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: nowrap; /* Menghindari pemutusan baris */
+    justify-content: flex-start; /* Memulai tata letak dari kiri ke kanan */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    margin-bottom: 150px; /* Memberi jarak bawah antara video dan elemen lainnya */
+    transition: transform 0.3s ease; /* Efek slide */
+}
+
+.video-container iframe {
+    width: 560px; /* Tetapkan lebar iframe */
+    height: 315px; /* Tetapkan tinggi iframe */
+    margin-right: 20px; /* Memberi jarak antara video */
+}
+
+/* Atur ulang lebar video jika layar lebih kecil */
+@media (max-width: 600px) {
+    .video-container iframe {
+        width: calc(100vw - 40px); /* Lebar video adalah lebar layar dikurangi padding */
+        height: calc((100vw - 40px) * 0.5625); /* Tetapkan tinggi video untuk mempertahankan rasio 16:9 */
+        margin-right: 0; /* Hapus margin antara video */
+        margin-bottom: 10px; /* Tambahkan margin bawah antara video */
+    }
+}
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-family: sans-serif;
+    box-shadow: 0 0 0 20px black; /* Menambahkan outline hitam di luar kotak footer */
+}
+
+
+header {
+    background-color: black; /* Warna latar belakang header */
+    color: white; /* Warna teks */
+    padding: 10px; /* Padding untuk memberi ruang di dalam header */
+    display: flex;
+    align-items: center; /* Mengatur elemen secara vertikal di tengah */
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-menu-column {
+    flex: 1;
+    margin: 0 10px;
+    max-width: 200px;
+}
+
+.footer-menu h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.footer-menu ul {
+    font-size: 13px;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+#controls {
+    text-align: center; /* Pusatkan tombol-tombol kontrol */
+    margin-top: 20px; /* Beri jarak dari atas */
+}
+
+#controls button {
+    padding: 10px 20px; /* Padding untuk tombol */
+    margin: 0 10px; /* Jarak antara tombol */
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang dengan transparansi */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Sudut kotak tombol */
+    cursor: pointer; /* Ubah kursor menjadi tangan saat mengarah ke tombol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: background-color 0.3s; /* Transisi warna latar belakang saat dihover */
+}
+
+#controls button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna latar belakang dengan transparansi saat dihover */
+}
+
+#progressBar {
+    width: 80%; /* Lebar progress bar */
+    height: 10px; /* Tinggi progress bar */
+    background-color: rgba(255, 255, 255, 0.2); /* Warna latar belakang progress bar */
+    border-radius: 5px; /* Sudut progress bar */
+    margin: 20px auto; /* Pusatkan progress bar dan tambahkan jarak atas 20px */
+    position: relative; /* Tetapkan posisi relatif untuk progress bar */
+    cursor: pointer; /* Ubah kursor menjadi tangan saat mengarah ke progress bar */
+}
+
+#progressIndicator {
+    position: absolute; /* Tetapkan posisi absolut untuk progress indicator */
+    top: 0; /* Atur posisi vertikal ke bagian atas progress bar */
+    left: 0; /* Atur posisi horizontal ke bagian kiri progress bar */
+    height: 100%; /* Tinggi progress indicator sama dengan tinggi progress bar */
+    width: 0; /* Lebar awal progress indicator */
+    background-color: #fff; /* Warna progress indicator */
+    border-radius: 5px; /* Sudut progress indicator */
+}
+
+#controls {
+    text-align: center; /* Pusatkan tombol-tombol kontrol */
+    margin-top: 20px; /* Beri jarak dari atas */
+}
+
+#controls button {
+    padding: 10px 20px; /* Padding untuk tombol */
+    margin: 0 10px; /* Jarak antara tombol */
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang dengan transparansi */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Sudut kotak tombol */
+    cursor: pointer; /* Ubah kursor menjadi tangan saat mengarah ke tombol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: background-color 0.3s; /* Transisi warna latar belakang saat dihover */
+}
+
+#controls button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna latar belakang dengan transparansi saat dihover */
+}
+
+/* CSS untuk tombol */
+#alertButton {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#alertButton:hover {
+    background-color: black;
+}
